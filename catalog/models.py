@@ -29,6 +29,7 @@ class Agency(models.Model):
     employees = models.CharField(max_length=255, blank=True)
     services = models.TextField(blank=True)
     scores = models.CharField(max_length=255, default='5')
+    contacts = models.TextField(blank=True)
 
     def __str__(self):
         return self.name
