@@ -18,6 +18,8 @@ from django.urls import path
 from catalog import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf import settings
+from django.urls import include, path  # For django versions from 2.0 and up
 
 
 
@@ -25,6 +27,16 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('categories/', views.all_cats, name='all_cats'),
-    path('<slug:slug>/', views.catalog, name='catalog'),
+    path('category/<slug:slug>/', views.catalog, name='catalog'),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+
+        # For django versions before 2.0:
+        # url(r'^__debug__/', include(debug_toolbar.urls)),
+
+    ] + urlpatterns
