@@ -24,15 +24,15 @@ class Agency(models.Model):
     origin_image = models.URLField(blank=True)
     cats = models.ManyToManyField(Category)
     description = models.TextField(blank=True)
-    rates = models.IntegerField(blank=True)
+    rates = models.CharField(max_length=255, blank=True)
     location = models.CharField(max_length=255, blank=True)
     year = models.IntegerField(blank=True)
     employees = models.CharField(max_length=255, blank=True)
     services = models.TextField(blank=True)
     scores = models.CharField(max_length=255, default='5')
     email = models.CharField(max_length=255, blank=True)
-    address = models.TextField(blank=True)
     phone = models.CharField(max_length=255, blank=True)
+    address = models.TextField(blank=True)
 
     def __str__(self):
         return self.name

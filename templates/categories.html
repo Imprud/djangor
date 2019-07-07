@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% load static %}
+{% block content %}
+<div class="row section-property section-t8">
+        <div class="container col-sm-12 col-md-8 section-md-t3">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h1 class="w-title-a text-brand">All Services</h1>
+            </div>
+            <div class="w-body-a">
+              <ul class="list-unstyled">
+                {% for cater in all_cats %}
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="/{{cater.slug}}"> {{cater.name}}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+</div>
+{% endblock %}

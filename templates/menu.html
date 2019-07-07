@@ -22,22 +22,23 @@
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            <a class="nav-link dropdown-toggle" href="/categories/" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
               Categories
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 {% for cat in categories %}
-              <a class="dropdown-item" href="{{ cat.slug }}">{{ cat.name }}</a>
+              <a class="dropdown-item" href="/{{ cat.slug }}">{{ cat.name }}</a>
 
                 {% endfor %}
+              <a class="dropdown-item" href="/categories/">All Categories</a>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="catalog/">Agencies</a>
+            <a class="nav-link" href="/catalog/">Agencies</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="/contact.html">Contact</a>
           </li>
         </ul>
       </div>
