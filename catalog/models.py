@@ -16,6 +16,9 @@ class Category(models.Model):
             self.slug = slugify(self.name)
         return super().save(*args, **kwargs)
 
+    class Meta:
+        verbose_name_plural = "Categories"
+
 
 class Agency(models.Model):
     name = models.CharField(max_length=255)
@@ -33,6 +36,9 @@ class Agency(models.Model):
     email = models.CharField(max_length=255, blank=True)
     phone = models.CharField(max_length=255, blank=True)
     address = models.TextField(blank=True)
+
+    class Meta:
+        verbose_name_plural = "Agencies"
 
     def __str__(self):
         return self.name

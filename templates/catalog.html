@@ -47,45 +47,35 @@
         </div>
         <!--item start-->
         {% for company in companies %}
-        <div class="col-md-3">
-          <div class="card-box-a card-shadow">
-            <div class="img-box-a" style="
-    min-height: 200px;
-">
-              <img src="{{company.origin_image}}" alt="{{company.name}}" class="img-a img-fluid" style="height: auto; object-fit: contain;">
-            </div>
-            <div class="card-overlay">
-              <div class="card-overlay-a-content">
-                <div class="card-header-a">
-                  <h2 class="card-title-a">
-                    <a href="{{ company.slug }}">{{ company.name }}</a>
-                  </h2>
-                </div>
-                <div class="card-body-a">
-                  <div class="price-box d-flex">
-                    <span class="price-a">Rates | {{ company.rates}}</span>
-                  </div>
-                  <a href="property-single.html" class="link-a">Click here to view
-                    <span class="ion-ios-arrow-forward"></span>
-                  </a>
-                </div>
-                <div class="card-footer-a">
-                  <ul class="card-info d-flex justify-content-around">
-                    <li>
-                      <h4 class="card-info-title">Year</h4>
-                      <span> {{ company.year}}
-                      </span>
-                    </li>
-                    <li>
-                      <h4 class="card-info-title">Employees</h4>
-                      <span>{{ company.employees }}</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+    <!--Card-->
+    <div class="card card-cascade narrower mb-4" style="margin-top: 28px">
+
+      <!--Card image-->
+      <div class="view view-cascade" style="margin-right: auto;">
+        <img src="{{company.origin_image}}" class="{{company.name}}"
+          alt="" style="width: auto; min-height: 40px">
+        <a href="{% url 'company' company.slug %}">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <!--/.Card image-->
+
+      <!--Card content-->
+      <div class="card-body card-body-cascade">
+        <h4 class="pink-text">{{company.name}}</h4>
+        <!--Title-->
+        <h5 class="card-title">{{ company.rates}}</h5>
+        <!--Text-->
+        <p class="card-text">{{ company.location }}</p>
+        <a class="btn btn-unique" href="{% url 'company' company.slug %}">View more</a>
+      </div>
+      <!--/.Card content-->
+
+    </div>
+    <!--/.Card-->
+
+  </div>
         {% endfor %}
         <!--item ends-->
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseBadRequest
 from django.http import HttpResponse
-from .models import Category
+from .models import Category, Agency
 
 
 def index(request):
@@ -34,8 +34,41 @@ def catalog(request, **kwargs):
     context = {
         'categories': Category.objects.all()[:12],
         'companies': companies,
-        'main_cat': category
+        'main_cat': category,
     }
 
     response = render(request, 'catalog.html', context)
     return response
+
+
+def company(request, **kwargs):
+
+    slug = kwargs.get('slug', None)
+
+    if not slug:
+        return HttpResponseBadRequest()
+
+    company = Agency.objects.get(slug=slug)
+
+    context = {
+        'company': company.name,
+        'origin_image': company.origin_image,
+        'description': company.description,
+        'rates': company.rates,
+        'location': company.location,
+        'year': company.year,
+        'employees': company.employees,
+        'services': company.services,
+        'scores': company.scores,
+        'email': company.email,
+        'phone': company.phone,
+        'address': company.address,
+        'categories': Category.objects.all()[:12],
+        'company_cats': company.cats.all()
+    }
+
+
+    response = render(request, 'company-single.html', context)
+    return response
+
+
