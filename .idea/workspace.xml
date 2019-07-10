@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="39950271-d323-41b7-bb95-1615c71aac14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/catalog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/catalog/models.py" afterDir="false" />
@@ -11,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/templates/company-single.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/company-single.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
+=======
+    <list default="true" id="39950271-d323-41b7-bb95-1615c71aac14" name="Default Changelist" comment="" />
+>>>>>>> 4199c8155f1e0c3544fb966ed9fe912fc8ebc2a4
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +25,7 @@
     <session id="-335628075">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.opened" value="3" />
@@ -170,8 +174,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalog/admin.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="374">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
+=======
+            <state relative-caret-position="380">
+              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+>>>>>>> 4199c8155f1e0c3544fb966ed9fe912fc8ebc2a4
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -267,18 +276,7 @@
             <path>
               <item name="djangor" type="b2602c69:ProjectViewProjectNode" />
               <item name="djangor" type="462c0819:PsiDirectoryNode" />
-              <item name="djangor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="djangor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="djangor" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="djangor" type="b2602c69:ProjectViewProjectNode" />
-              <item name="djangor" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="contactform" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="djangor" type="b2602c69:ProjectViewProjectNode" />
@@ -297,6 +295,15 @@
               <item name="djangor" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="djangor" type="b2602c69:ProjectViewProjectNode" />
+              <item name="djangor" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="unused" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> 4199c8155f1e0c3544fb966ed9fe912fc8ebc2a4
           </expand>
           <select />
         </subPane>
@@ -338,8 +345,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
+=======
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+>>>>>>> 4199c8155f1e0c3544fb966ed9fe912fc8ebc2a4
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2313988" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -498,8 +509,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/company-single.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="170">
           <caret line="124" column="60" selection-start-line="124" selection-start-column="60" selection-end-line="124" selection-end-column="60" />
+=======
+        <state relative-caret-position="380">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+>>>>>>> 4199c8155f1e0c3544fb966ed9fe912fc8ebc2a4
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#1;n#!!top" expanded="true" />
