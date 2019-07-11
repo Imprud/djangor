@@ -11,6 +11,10 @@
   <!-- Material Design Bootstrap 700kb !!!!! -->
   <link href="{% static 'css/compiled-4.8.5.min.css' %}" rel="stylesheet">
 
+
+
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/star-rating-svg.css' %}">
   <!-- Favicons -->
   <link href="{% static 'img/favicon.png' %}" rel="icon">
   <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
@@ -812,8 +816,13 @@
   <div id="preloader"></div>
 
   <!-- JavaScript Libraries -->
+
+  <!-- jquery -->
   <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+
+
+
   <script src="{% static 'lib/popper/popper.min.js' %}"></script>
   <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
   <script src="{% static 'lib/easing/easing.min.js' %}"></script>
@@ -824,6 +833,23 @@
 
   <!-- Template Main Javascript File -->
   <script src="{% static 'js/main.js' %}"></script>
+
+  <!-- Star Rating -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="{% static 'js/jquery.star-rating-svg.js' %}"></script>
+   <script>
+          $(".my-rating-4").starRating({
+            totalStars: 5,
+            starShape: 'rounded',
+            starSize: 20,
+            emptyColor: 'lightgray',
+            activeColor: '#2eca6a',
+            useGradient: false,
+            readOnly: true
+          });
+  </script>
+
+
 
 </body>
 </html>

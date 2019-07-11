@@ -59,16 +59,22 @@
           <div class="mask rgba-white-slight"></div>
         </a>
       </div>
+
       <!--/.Card image-->
 
       <!--Card content-->
       <div class="card-body card-body-cascade">
         <h4 class="pink-text">{{company.name}}</h4>
+        <div class="my-rating-4" data-rating="{{ company.scores }}"></div>
         <!--Title-->
         <h5 class="card-title">{{ company.rates}}</h5>
         <!--Text-->
         <p class="card-text">{{ company.location }}</p>
+
         <a class="btn btn-unique" href="{% url 'company' company.slug %}">View more</a>
+
+
+
       </div>
       <!--/.Card content-->
 
@@ -109,5 +115,7 @@
       </div>
     </div>
   </section>
+
   <!--/ Property Grid End /-->
+
 {% endblock %}

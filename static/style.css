@@ -1,0 +1,12 @@
+.parent {
+  display: flex;
+  height: 300px; /* Or whatever */
+  border: 1px solid black;
+}
+
+.child {
+  width: 100px;  /* Or whatever */
+  height: 100px; /* Or whatever */
+  margin: 25px auto;  /* Magic! */
+  border: 1px solid black;
+}
