@@ -19,7 +19,7 @@
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="index.html">Home</a>
+                <a href="/">Home</a>
               </li>
               <li class="breadcrumb-item">
                 <a href="{% url 'all_cats' %}">Categories</a>
@@ -59,7 +59,12 @@
                   </div>
                 </div>
                 <div class="summary-list">
+
                   <ul class="list">
+                    <li class="d-flex justify-content-between">
+                      <strong>Rating: </strong>
+                      <div class="my-rating-4" data-rating="{{ scores }}"></div>
+                    </li>
                     <li class="d-flex justify-content-between">
                       <strong>Rates:</strong>
                       <span>{{ rates }}</span>

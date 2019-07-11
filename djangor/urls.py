@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from catalog import views
+from seo.views import robots_txt_view
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import include, path  # For django versions from 2.0 and up
+
 
 
 
@@ -29,15 +31,16 @@ urlpatterns = [
     path('categories/', views.all_cats, name='all_cats'),
     path('category/<slug:slug>/', views.catalog, name='catalog'),
     path('company/<slug:slug>/', views.company, name='company'),
+    path('robots.txt', robots_txt_view,)
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
-# if settings.DEBUG:
-#     import debug_toolbar
-#     urlpatterns += [
-#         path('__debug__/', include(debug_toolbar.urls)),
-#
-#         # For django versions before 2.0:
-#         # url(r'^__debug__/', include(debug_toolbar.urls)),
-#
-#     ] + urlpatterns
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+        path('__debug__/', include(debug_toolbar.urls)),
+
+        # For django versions before 2.0:
+        # url(r'^__debug__/', include(debug_toolbar.urls)),
+
+    ] + urlpatterns
