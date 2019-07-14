@@ -27,6 +27,7 @@ from django.urls import include, path  # For django versions from 2.0 and up
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
     path('', views.index, name='index'),
     path('categories/', views.all_cats, name='all_cats'),
     path('category/<slug:slug>/', views.catalog, name='catalog'),
@@ -37,10 +38,5 @@ urlpatterns = [
 
 if settings.DEBUG:
     import debug_toolbar
-    urlpatterns = [
-        path('__debug__/', include(debug_toolbar.urls)),
-
-        # For django versions before 2.0:
-        # url(r'^__debug__/', include(debug_toolbar.urls)),
-
-    ] + urlpatterns
+    urlpatterns += [path('__debug__/', include(debug_toolbar.urls))]
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
