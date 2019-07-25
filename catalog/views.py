@@ -52,7 +52,7 @@ def company(request, **kwargs):
 
     context = {
         'company': company.name,
-        'origin_image': company.origin_image,
+        'logo': company.logo,
         'description': company.description,
         'rates': company.rates,
         'location': company.location,
