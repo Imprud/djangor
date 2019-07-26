@@ -5,10 +5,17 @@ from .models import Category, Agency
 
 
 def index(request):
+
+    category = Category.objects.get(slug='mobile-app-development')
+    companies = category.agency_set.all()[:12]
+
     context = {
-        'categories': Category.objects.all()[:12]
+        'categories': Category.objects.all()[:12],
+        'companies': companies,
     }
     response = render(request, 'index.html', context)
+
+
     return response
 
 
