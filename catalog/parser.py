@@ -21,7 +21,6 @@ with open('urls.txt', 'r') as f:
     all_cats = f.read().split('\n')
 
 with HTMLSession() as session:
-
     for cat in all_cats[4:5]:
         for page in range(1, 5):
             print(f'Category name to parse: {cat}')
