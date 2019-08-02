@@ -10,18 +10,15 @@ def index(request):
     companies = category.agency_set.all()[:12]
 
     context = {
-        'categories': Category.objects.all()[:12],
         'companies': companies,
     }
     response = render(request, 'index.html', context)
-
 
     return response
 
 
 def all_cats(request):
     context = {
-        'categories': Category.objects.all()[:12],
         'all_cats': Category.objects.all()
     }
     response = render(request, 'categories.html', context)
@@ -39,7 +36,6 @@ def catalog(request, **kwargs):
     companies = category.agency_set.all()[:32]
 
     context = {
-        'categories': Category.objects.all()[:12],
         'companies': companies,
         'main_cat': category,
     }
@@ -70,7 +66,6 @@ def company(request, **kwargs):
         'email': company.email,
         'phone': company.phone,
         'address': company.address,
-        'categories': Category.objects.all()[:12],
         'company_cats': company.cats.all()
     }
 
