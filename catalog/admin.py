@@ -16,7 +16,7 @@ class AgencyAdmin(SummernoteModelAdmin):
 
     def show_image(self, obj):
         try:
-            img = mark_safe(f'<img src="{obj.origin_image}">')
+            img = mark_safe(f'<img src="{obj.logo.url}">')
         except Exception:
             img = 'not found'
         return img

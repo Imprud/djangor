@@ -22,10 +22,14 @@ class Category(models.Model):
 
 class Agency(models.Model):
     name = models.CharField(max_length=255)
+    # new
+    logo = models.ImageField(upload_to='logos', blank=True)
+    website = models.URLField(blank=True)
     slug = models.CharField(max_length=255, unique=True)
-    drive_imgage = models.ImageField(blank=True)
     origin_image = models.URLField(blank=True)
     cats = models.ManyToManyField(Category)
+    #new have no parser func
+    short_description = models.TextField(blank=True)
     description = models.TextField(blank=True)
     rates = models.CharField(max_length=255, blank=True)
     location = models.CharField(max_length=255, blank=True)

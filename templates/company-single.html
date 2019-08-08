@@ -19,7 +19,7 @@
           <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
             <ol class="breadcrumb">
               <li class="breadcrumb-item">
-                <a href="/">Home</a>
+                <a href="{% url 'index' %}">Home</a>
               </li>
               <li class="breadcrumb-item">
                 <a href="{% url 'all_cats' %}">Categories</a>
@@ -46,7 +46,7 @@
               <div class="property-price d-flex foo">
                 <div class="card-header-c d-flex">
                   <div class="card-box-ico" style="min-width: 100px; padding: 1rem;">
-                    <img src="{{ origin_image }}" itemprop="image" alt="{{ company }}" style="height: auto; object-fit: contain; width: 100%">
+                    <img src="{{ logo.url }}" itemprop="image" alt="{{ company }}" style="height: auto; object-fit: contain; width: 100%">
                   </div>
                 </div>
               </div>

@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 .idea
+workspace.xml
+
 
 # C extensions
 *.so
@@ -15,10 +17,13 @@ dist/
 downloads/
 eggs/
 .eggs/
+<<<<<<< HEAD
 lib/
 .lib/
 static/
 .static/
+=======
+>>>>>>> 9dda88470f7b8028f5496bef4e5834b90fcdfdd1
 lib64/
 parts/
 sdist/
