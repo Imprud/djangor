@@ -115,7 +115,49 @@
       </div>
     </div>
   </section>
+<section>
+<div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand">By employees</h3>
+            </div>
+            <div class="w-body-a">
+              <div class="w-body-a">
+                <ul class="list-unstyled">
+                  {% for empl in employees_num %}
+                  <li class="item-list-a">
+                    <i class="fa fa-angle-right"></i> <a href="?employees={{empl.employees}}">{{ empl.employees }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-sm-12 col-md-4 section-md-t3">
+          <div class="widget-a">
+            <div class="w-header-a">
+              <h3 class="w-title-a text-brand">Rates</h3>
+            </div>
+            <div class="w-body-a">
+              <ul class="list-unstyled">
+                {% for rate in rates_list %}
+                {%if rate.rates|length > 1%}
+                <li class="item-list-a">
+                  <i class="fa fa-angle-right"></i> <a href="?rate={{ rate.rates }}">{{ rate.rates }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
   <!--/ Property Grid End /-->
 
 {% endblock %}

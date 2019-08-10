@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponseBadRequest
 from django.http import HttpResponse
 from .models import Category, Agency
+from django.db.models import Count
 
 
 def index(request):
@@ -18,8 +19,11 @@ def index(request):
 
 
 def all_cats(request):
+    all_cats = Category.objects.annotate(
+        agency_count=Count('agency')).order_by('-agency_count')
+
     context = {
-        'all_cats': Category.objects.all()
+        'all_cats': all_cats
     }
     response = render(request, 'categories.html', context)
     return response
@@ -33,11 +37,25 @@ def catalog(request, **kwargs):
 
     category = Category.objects.get(slug=slug)
 
-    companies = category.agency_set.all()[:32]
+    employees = request.GET.get('employees', None)
+    rates = request.GET.get('rate', None)
+
+    if employees:
+        companies = category.agency_set.filter(employees=employees)[:30]
+    elif rates:
+        companies = category.agency_set.filter(rates=rates)[:30]
+    else:
+        companies = category.agency_set.all()[:30]
+
+    rates_list = category.agency_set.all().values('rates').distinct()
+    employees_num = category.agency_set.all().values('employees').distinct()
+
 
     context = {
         'companies': companies,
         'main_cat': category,
+        'employees_num': employees_num,
+        'rates_list': rates_list,
     }
 
     response = render(request, 'catalog.html', context)
