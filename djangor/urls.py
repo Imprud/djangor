@@ -30,8 +30,8 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('', views.index, name='index'),
     path('categories/', views.all_cats, name='all_cats'),
-    path('category/<slug:slug>/', views.catalog, name='catalog'),
-    path('company/<slug:slug>/', views.company, name='company'),
+    path('category/<slug:slug>/', views.AgencyListView.as_view(), name='catalog'),
+    path('company/<slug:slug>/', views.CompanyView.as_view(), name='company'),
     path('robots.txt', robots_txt_view,)
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
